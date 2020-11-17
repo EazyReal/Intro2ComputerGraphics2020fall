@@ -1,0 +1,5 @@
+/Users/maxwill/Intro2ComputerGraphics2020fall/HW1/build/CMakeFiles/rebuild_cache.dir
+/Users/maxwill/Intro2ComputerGraphics2020fall/HW1/build/CMakeFiles/edit_cache.dir
+/Users/maxwill/Intro2ComputerGraphics2020fall/HW1/build/CMakeFiles/package_source.dir
+/Users/maxwill/Intro2ComputerGraphics2020fall/HW1/build/CMakeFiles/package.dir
+/Users/maxwill/Intro2ComputerGraphics2020fall/HW1/build/CMakeFiles/HW1.dir

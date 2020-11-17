@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/Users/maxwill/Intro2ComputerGraphics2020fall/HW1/build",
+  "command": "/usr/bin/clang++   -I/Users/maxwill/Intro2ComputerGraphics2020fall/HW1/include -isystem /usr/local/include  -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk   -o CMakeFiles/HW1.dir/main.cpp.o -c /Users/maxwill/Intro2ComputerGraphics2020fall/HW1/main.cpp",
+  "file": "/Users/maxwill/Intro2ComputerGraphics2020fall/HW1/main.cpp"
+},
+{
+  "directory": "/Users/maxwill/Intro2ComputerGraphics2020fall/HW1/build",
+  "command": "/usr/bin/clang++   -I/Users/maxwill/Intro2ComputerGraphics2020fall/HW1/include -isystem /usr/local/include  -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk   -o CMakeFiles/HW1.dir/Object.cpp.o -c /Users/maxwill/Intro2ComputerGraphics2020fall/HW1/Object.cpp",
+  "file": "/Users/maxwill/Intro2ComputerGraphics2020fall/HW1/Object.cpp"
+}
+]

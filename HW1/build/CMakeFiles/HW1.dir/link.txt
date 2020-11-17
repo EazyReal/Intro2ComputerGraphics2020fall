@@ -1,0 +1,1 @@
+/usr/bin/clang++  -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/HW1.dir/main.cpp.o CMakeFiles/HW1.dir/Object.cpp.o  -o HW1 -framework OpenGL -framework OpenGL -framework GLUT -framework Cocoa /usr/local/lib/libglfw.3.3.dylib 
