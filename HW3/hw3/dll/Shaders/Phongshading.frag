@@ -23,7 +23,7 @@ void main()
   float spec = 0.0;
   if(lambertian > 0.0) {
     vec3 R = normalize(reflect(-L, N));      // Reflected light vector
-    vec3 V = normalize(-worldPos); // Vector to eye pos (0,0,0)
+    vec3 V = normalize(worldCamPos-worldPos); // Vector to eye 
     // Compute the specular term
     float specAngle = max(dot(R, V), 0.0);
     spec = pow(specAngle, gloss);

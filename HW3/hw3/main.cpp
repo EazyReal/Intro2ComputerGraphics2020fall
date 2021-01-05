@@ -44,6 +44,9 @@ glm::vec3 La = glm::vec3(0.2, 0.2, 0.2);
 glm::vec3 Ld = glm::vec3(0.8, 0.8, 0.8);
 glm::vec3 Ls = glm::vec3(0.5, 0.5, 0.5);
 
+// Edge Color for Edge Effect
+glm::vec4 edge_color = glm::vec4(0.0, 0.0, 1.0, 1.0);
+
 float gloss = 25.;
 
 
@@ -69,12 +72,17 @@ int main(int argc, char** argv) {
 }
 
 void shaderInit() {
-	GLuint vert = createShader("Shaders/Phongshading.vert", "vertex");
-	GLuint frag = createShader("Shaders/Phongshading.frag", "fragment");
-	Phongprogram = createProgram(vert, frag);
-	//// TODO: ////
+	GLuint vert_phong = createShader("Shaders/Phongshading.vert", "vertex");
+	GLuint frag_phong = createShader("Shaders/Phongshading.frag", "fragment");
 	// create the shaders and programs you need.
-
+	GLuint vert_toon = createShader("Shaders/ToonShading.vert", "vertex");
+	GLuint frag_toon = createShader("Shaders/ToonShading.frag", "fragment");
+	GLuint vert_edge = createShader("Shaders/EdgeEffect.vert", "vertex");
+	GLuint frag_edge = createShader("Shaders/EdgeEffect.frag", "fragment");
+	Phongprogram = createProgram(vert_phong, frag_phong);
+	Toonprogram = createProgram(vert_toon, frag_toon);
+	Edgeprogram = createProgram(vert_edge, frag_edge);
+	// init with Phong
 	program = Phongprogram;
 }
 
@@ -214,14 +222,14 @@ void keyboard(unsigned char key, int x, int y) {
 	{
 		//// TODO: ////
 		// switch to the program which you want to use
-		program = Phongprogram;
+		program = Toonprogram;
 		break;
 	}
 	case '3':
 	{
 		//// TODO: ////
 		// switch to the program which you want to use
-		program = Phongprogram;
+		program = Edgeprogram;
 		break;
 	}
 	default:
@@ -262,6 +270,7 @@ void DrawUmbreon()
 	// Pass all variable to shaders and trigger by Uniform (like:WorldLightPos, WorldCamPos, Ka, La ......etc)
 	glUniform3fv(glGetUniformLocation(program, "worldLightPos"), 1, &WorldLightPos[0]);
 	glUniform3fv(glGetUniformLocation(program, "worldCamPos"), 1, &WorldCamPos[0]);
+
 	glUniform3fv(glGetUniformLocation(program, "Ka"), 1, &Ka[0]);
 	glUniform3fv(glGetUniformLocation(program, "Kd"), 1, &Kd[0]);
 	glUniform3fv(glGetUniformLocation(program, "Ks"), 1, &Ks[0]);
@@ -269,6 +278,8 @@ void DrawUmbreon()
 	glUniform3fv(glGetUniformLocation(program, "Ld"), 1, &Ld[0]);
 	glUniform3fv(glGetUniformLocation(program, "Ls"), 1, &Ls[0]);
 	glUniform1f(glGetUniformLocation(program, "gloss"), gloss);
+
+	glUniform4fv(glGetUniformLocation(program, "edge_color"), 1, &edge_color[0]);
 
 	glBindVertexArray(VAO);
 	glDrawArrays(GL_QUADS, 0, 4 * model->fNum);
