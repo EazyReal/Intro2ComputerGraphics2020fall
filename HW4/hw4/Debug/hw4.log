@@ -1,0 +1,8 @@
+﻿  main.cpp
+C:\Users\Maxwill\Documents\0712238_YanTongLin\hw4\include\FreeImage.h(1,1): warning C4819: 檔案含有無法在目前字碼頁 (950) 中表示的字元。請以 Unicode 格式儲存檔案以防止資料遺失
+C:\Users\Maxwill\Documents\0712238_YanTongLin\hw4\main.cpp(39,48): warning C4244: '引數': 將 'float' 轉換為 'int'，由於類型不同，可能導致資料遺失
+C:\Users\Maxwill\Documents\0712238_YanTongLin\hw4\main.cpp(39,33): warning C4244: '引數': 將 'float' 轉換為 'int'，由於類型不同，可能導致資料遺失
+C:\Users\Maxwill\Documents\0712238_YanTongLin\hw4\main.cpp(132,18): warning C4244: '=': 將 'GLsizei' 轉換為 'float'，由於類型不同，可能導致資料遺失
+C:\Users\Maxwill\Documents\0712238_YanTongLin\hw4\main.cpp(133,18): warning C4244: '=': 將 'GLsizei' 轉換為 'float'，由於類型不同，可能導致資料遺失
+C:\Users\Maxwill\Documents\0712238_YanTongLin\hw4\main.cpp(186,60): warning C4244: '引數': 將 'int' 轉換為 'GLfloat'，由於類型不同，可能導致資料遺失
+  hw4.vcxproj -> C:\Users\Maxwill\Documents\0712238_YanTongLin\Debug\hw4.exe
